@@ -1,57 +1,36 @@
-<div class="container">
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<link rel="shortcut icon" type="image/png" href="img_debbie1.png">
+			{% seo %}
+		</head>
+		<body>
+				<div class="topnav">
+					<a href="/" style="font-size:34px; font-family:Noto Sans, sans-serif; font-weight: 400; color: Red">Deborah Nakkungu</a>
+				  <div class="topnav-right">
+					<a href="/" style="color: black">Home</a>
+					<a href="/cv" style="color: black">CV</a></li>
+					<a href="/research" style="color: black">Research</a>
+					<a href="/teaching" style="color: black">Teaching</a>
+				  </div>
+				</div>	
+			<hr>
 
-  <div class="row">
-
-    <div class="col-md-12">
-
-      <div class="hero-container">
-
-        <div class="hero-content">
-
-          {% if site.title != '' %}
-          <h1 class="text-center">
-            <img src="img/headshot-2019.jpg" class="bio-pic" /><br />
-            {{site.title}}
-          </h1>
-          {% endif %}
-
-          {% if site.description != '' or site.enable_contact == true %}
-          <p class="text-center">
-            {% if site.description != '' %}
-            {{site.description}}
-            {% endif %}
-
-            {% if site.enable_contact == true %}
-            {% include contact.html %}
-            {% include contact-modal.html %}
-            {% endif %}
-          </p>
-          {% endif %}
-
-          <div class="hero-buttons">
-
-            {% if site.twitter_username != '' %}
-              <a href="https://twitter.com/{{ site.twitter_username }}"><button class="btn btn-default btn-lg"><i class="fa fa-twitter fa-lg"></i>Twitter</button></a>
-            {% endif %}
-            {% if site.github_username != '' %}
-              <a href="https://github.com/{{ site.github_username }}"><button class="btn btn-default btn-lg"><i class="fa fa-github fa-lg"></i>Github</button></a>
-            {% endif %}
-            {% if site.medium_username != '' %}
-              <a href="https://{{ site.medium_username }}"><button class="btn btn-default btn-lg"><i class="fa fa-medium fa-lg"></i>Medium</button></a>
-            {% endif %}
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <a class="section-jump text-center" href="#portfolio">
-        <i class="fa fa-angle-down fa-3x"></i>
-      </a>
-
-    </div>
-
-  </div>
-
-</div>
+			<div class="container">
+			
+			{{ content }}
+	
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="mailto:deborah.nakkungu28@myhunter.cuny.edu">email</a></li>
+	        		<li><a href="https://github.com/deborah-nakkungu" target="_blank">github</a></li>
+				<li><a href="https://twitter.com/NakkunguD" target="_blank">twitter</a></li>
+				</ul>
+			</footer>
+		</body>
+	</html>
